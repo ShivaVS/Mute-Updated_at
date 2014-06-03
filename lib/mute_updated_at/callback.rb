@@ -1,11 +1,11 @@
 module MuteUpdatedAt
-
   module Callback
 
     def skip_timestamping
       unless self.new_record?
         self.record_timestamps = false
       end
+
       true
     end
 
@@ -16,13 +16,12 @@ module MuteUpdatedAt
     def mute_updated_at
       require 'mute_updated_at/callback'
       include MuteUpdatedAt::Callback
+
       class_eval do
         before_save :skip_timestamping
       end
-
     end
 
-    end
-
+  end
 end
 
