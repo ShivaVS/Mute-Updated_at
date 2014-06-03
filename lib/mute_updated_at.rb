@@ -1,0 +1,2 @@
+module MuteUpdatedAt
+end
