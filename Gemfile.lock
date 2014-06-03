@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     mute_updated_at (0.0.1)
-      rails (~> 3.2.18)
+      rails (~> 3.2.17)
 
 GEM
   remote: https://rubygems.org/

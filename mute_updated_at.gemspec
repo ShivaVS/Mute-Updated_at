@@ -7,16 +7,15 @@ require "mute_updated_at/version"
 Gem::Specification.new do |s|
   s.name        = "mute_updated_at"
   s.version     = MuteUpdatedAt::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MuteUpdatedAt."
+  s.authors     = "Shiva S"
+  s.email       = "shiva.vs_india@yahoo.com"
+  s.homepage    = "https://github.com/ShivaVS/Mute-Updated_at"
+  s.summary     = "dont update updated_at field"
   s.description = "TODO: Description of MuteUpdatedAt."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.17"
+  s.add_dependency "rails", "~> 3.0.0"
 
-  s.add_development_dependency "sqlite3"
 end
