@@ -1,3 +1,82 @@
 = MuteUpdatedAt
 
+# Mute UpdatedAt
+
+Do not update updated_at column when updating a active record object.
+
+## Installation
+
+Install the latest stable release using bundler:
+
+   [sudo] gem "mute_updated_at"
+
+And then execute:
+
+    $ bundle
+
+Or install it manually:
+
+    $ gem install mute_updated_at
+
+Finally, restart the server to apply the changes.
+
+
+## Getting Started
+   # Class Level
+
+   In your Model just add :--
+
+   mute_updated_at
+
+   Example
+
+   class Post < ActiveRecord::Base
+     attr_accessible :name
+     mute_updated_at
+   end
+
+   this will not update update_at column for any object Post class.
+
+   post = Post.new({:name => "Ruby"})
+   post.save
+
+   sql query generated
+
+   INSERT INTO "posts" ("created_at", "name", "updated_at") VALUES (?, ?, ?)
+    [["created_at", Thu, 05 Jun 2014 12:48:19 UTC +00:00], ["name", "Ruby"], ["updated_at", Thu, 05 Jun 2014 12:48:19 UTC +00:00]]
+
+   post.name = "Rails"
+   post.save
+
+   sql query generated
+
+   UPDATE "topics" SET "name" = 'Rails' WHERE "topics"."id" = 5
+
+   # Object Level
+
+   To skip for a particular object use
+
+   skip_updated_at_and_save method
+
+   class Comment < ActiveRecord::Base
+     attr_accessible :name
+   end
+
+   comment = Comment.new({:name => "Ruby"})
+   comment.save
+
+   comment.name = "Rails"
+   comment.save
+
+   sql query generated
+
+   UPDATE "comments" SET "name" = 'Rails', "updated_at" = '2014-06-05 12:50:20.770767' WHERE "comments"."id" = 1
+
+   comment.name = "Rails 4"
+   comment.skip_updated_at_and_save
+
+   sql query generated
+
+   UPDATE "comments" SET "name" = 'Rails 4' WHERE "comments"."id" = 1
+
 This project rocks and uses MIT-LICENSE.
