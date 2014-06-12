@@ -11,7 +11,9 @@ Gem::Specification.new do |s|
   s.email       = "shiva.vs_india@yahoo.com"
   s.homepage    = "https://github.com/ShivaVS/Mute-Updated_at"
   s.summary     = "dont update updated_at field"
-  s.description = "TODO: Description of MuteUpdatedAt."
+  s.description = "Description of MuteUpdatedAt dont update updated_at field."
+  s.add_development_dependency "ruby", "~> 1.9"
+  s.add_development_dependency "bundler", "~> 1.3"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

@@ -1,4 +1,4 @@
-= MuteUpdatedAt
+= MuteUpdatedAt [![Code Climate](https://codeclimate.com/github/ShivaVS/Mute-Updated_at.png)](https://codeclimate.com/github/ShivaVS/Mute-Updated_at)
 
 # Mute UpdatedAt
 
