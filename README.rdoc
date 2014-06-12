@@ -1,6 +1,4 @@
-= MuteUpdatedAt [![Code Climate](https://codeclimate.com/github/ShivaVS/Mute-Updated_at.png)](https://codeclimate.com/github/ShivaVS/Mute-Updated_at)
-
-# Mute UpdatedAt
+# Mute UpdatedAt [![Code Climate](https://codeclimate.com/github/ShivaVS/Mute-Updated_at.png)](https://codeclimate.com/github/ShivaVS/Mute-Updated_at)
 
 Do not update updated_at column when updating a active record object.
 
