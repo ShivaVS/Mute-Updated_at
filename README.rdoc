@@ -1,4 +1,3 @@
-https://badge.fury.io/rb/mute_updated_at.png
 
 Do not update updated_at column when updating a active record object.
 
